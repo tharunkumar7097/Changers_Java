@@ -1,0 +1,48 @@
+BinarySearch:-
+----------------------------------------
+
+
+package DSA;
+
+public class BinarySearch {
+
+	public static void binary(int arr[],int search) {
+		// TODO Auto-generated method stub
+		
+		int start=0;
+		int end=arr.length-1;
+		int mid=(start+end)/2;
+		int val=0;
+		while (start<=end) {
+			mid=(start+end)/2;
+		if(search==arr[mid]) {
+			val=-1;
+			System.out.println("Value is pressent "+arr[mid]);
+			break;
+		}
+		else if (search<arr[mid]) {
+			end=mid-1;
+			
+			
+		}
+		else if(search>arr[mid]) {
+			start=mid+1;
+			
+			
+		}
+		
+		
+		}	
+		if (val==0) {
+			System.out.println("Value is not present");
+		}
+
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {1,4,5,9,34,67,98};
+		int search=8;
+		
+		binary(arr,search);
+	}
+}
